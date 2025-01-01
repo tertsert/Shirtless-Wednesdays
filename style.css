@@ -1,0 +1,197 @@
+
+*{
+    margin: 0 1%; /* Determines my margins*/
+    box-sizing: border-box;
+}
+
+body{
+    height: 95vh;
+    background: #fbfbfb;
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: bold;
+    color: #000000;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Ribbon */
+header {
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    background-color: #fbfbfb;
+    padding: 10px 20px;
+}
+.home-image {
+    width: 100px;
+    height: 100px;
+    background-image: url('assets/Logo/Shirtless Wednesdays Logo-500x500.png');
+    background-size: cover; 
+    background-position: center;
+}
+.home-button {
+    text-align: left;
+} 
+.home-button a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+}
+.home-button a:hover {
+    color: #ea3700
+}
+.navigation a.active {
+    color: #ea3700 /* This is what makes the selected ribbon item stay highlighted*/
+}
+.page-menu nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+.page-menu a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.page-menu a:hover {
+    color: #ea3700;
+}
+
+/* About Section*/
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2rem;  /* Adds spacing between the left and right sections */
+}
+.left {
+    flex: 1;
+    background-color: #ff000000;  /* Optional background color */
+    padding: 2rem;
+}
+.right {
+    flex: 1;
+    font-size: clamp(0.5rem, 2vw, 1.5rem);
+    background-color: #ff000000;  /* Optional background color */
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.left h1 {
+    font-size: 2rem;  /* Adjust to your desired size */
+}
+.left h3 {
+    font-size: 1rem;  /* Adjust to your desired size */
+}
+
+/* Journal Page specific */
+.journal-grid-container {
+    display: flex;
+    flex-direction: column; /* Stack the elements vertically */
+    justify-content: flex-start;  /* Align at the top */
+    align-items: center;          /* Center horizontally */
+    padding: 2rem;
+    height: auto;
+    background-color: #ea370000;
+}
+.journal-grid {
+    column-count: 3; /* Number of columns */
+    column-gap: 10px; /* Space between columns */
+    width: 80%; /* Full width container */
+}
+@media (max-width: 720px) {
+    .journal-grid {
+        width: 100%;
+    }
+}
+.journal-grid img {
+    width: 100%; /* Makes images scale to their column width */
+    margin-bottom: 10px; /* Space between images */
+    display: block; /* Avoid inline-block spacing issues */
+}
+.journal-main-text {
+    font-size: clamp(3rem, 8vw, 10rem); /* Responsive scaling */
+    font-weight: bold; /* Make it bold for emphasis */
+    text-align: left; /* Align the text to the left */
+    width: 80%;
+    padding-top: 100px;
+    color: #000; /* Adjust color as needed */
+    background-color: #ff000000;
+}
+.title-and-text {
+    display: flex;
+    align-items: center; /* Align title and paragraph vertically */
+    gap: 20px;  /* Space between title and paragraph */
+}
+.title-and-text h1 {
+    margin: 0;
+    font-size: clamp(3rem, 10vw, 10rem); /* Title scaling */
+}
+.title-and-text p {
+    font-size: clamp(0.5rem, 2vw, 1.5rem);
+    margin: 0;  /* Remove default margin */
+    line-height: 1.6;  /* Adjust line height for readability */
+    color: #000000; /* Optional: Color of the paragraph */
+}
+@media (max-width: 720px) { /* Adjust max-width as needed */
+    .title-and-text p {
+        opacity: 0; /* Hide the text */
+    }
+}
+.highlight {
+    color: #ea3700; /* Highlight color (you can change it) */
+    font-weight: bold; /* Make it bold or adjust as needed */
+}
+
+
+/* Main Section */
+.main{
+    display: flex;
+    flex: 1;
+}
+
+.left{
+    background: #efefef;
+    padding: 3em 0 3em 0;
+    flex: 1 1 100px;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    line-height: 1.2;
+    
+}
+
+.left h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.left h3 {
+    font-size: clamp(1rem, 3vw, 1.8rem);
+}
+
+.left img {
+    width: 90%;
+    height: auto; 
+}
+
+main{
+    background: #afafaf;
+    padding: 3em 0 3em 0;
+    flex: 5 5 150px;
+}
+
+.right{
+    background: #afafaf;
+    padding: 3em 0 3em 0;
+    flex: 1fr 1fr;
+}
+
+footer{
+    background: #afafaf;
+    padding: 1em 0 1em 0;
+}
+
