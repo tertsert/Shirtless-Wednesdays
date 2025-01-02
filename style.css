@@ -61,13 +61,13 @@ header {
 .navigation a.active {
     color: #ea3700;
 }
-@media (max-width: 720px) { /*mobile formatting*/
+@media (max-width: 1080px) { /*mobile formatting*/
     .home-image img {
         width: 50px; /* Shrinks the image for mobile screens */
         height: auto; /* Maintains aspect ratio */
     }
     .site-title {
-        font-size: 12px; /* Smaller size for mobile devices */
+        opacity: 0;
     }
     .navigation a {
         font-size: 12px;
