@@ -29,12 +29,12 @@ header {
 .home-image {
     display: flex;
     align-items: center;
-    gap: 10px; /* Space between logo and title */
+    gap: 5px; /* Space between logo and title */
     cursor: pointer; /* Make it clear that it's clickable */
 }
 .home-image img {
     width: 100px;
-    height: 100px;
+    height: auto;
     background-size: cover; 
     background-position: center;
 }
@@ -46,13 +46,13 @@ header {
 .navigation {
     display: flex;
     justify-content: flex-end;
-    gap: 20px;
+    flex: 1;
 }
 .navigation a {
     text-decoration: none;
     color: #000;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: normal;
     transition: color 0.3s;
 }
 .navigation a:hover {
@@ -60,6 +60,18 @@ header {
 }
 .navigation a.active {
     color: #ea3700;
+}
+@media (max-width: 720px) { /*mobile formatting*/
+    .home-image img {
+        width: 50px; /* Shrinks the image for mobile screens */
+        height: auto; /* Maintains aspect ratio */
+    }
+    .site-title {
+        font-size: 12px; /* Smaller size for mobile devices */
+    }
+    .navigation a {
+        font-size: 12px;
+    }
 }
 
 /* About Section*/
