@@ -61,7 +61,7 @@ header {
 .navigation a.active {
     color: #ea3700;
 }
-@media (max-width: 1080px) { /*mobile formatting*/
+@media (max-width: 600px) { /*mobile formatting*/
     .home-image img {
         width: 50px; /* Shrinks the image for mobile screens */
         height: auto; /* Maintains aspect ratio */
@@ -71,6 +71,7 @@ header {
     }
     .navigation a {
         font-size: 12px;
+        padding: 5px;
     }
 }
 
@@ -83,13 +84,13 @@ header {
 }
 .left {
     flex: 1;
-    background-color: #ff000000;  /* Optional background color */
+    background-color: #ff0000;  /* Optional background color */
     padding: 2rem;
 }
 .right {
     flex: 1;
     font-size: clamp(0.5rem, 2vw, 1.5rem);
-    background-color: #ff000000;  /* Optional background color */
+    background-color: #ff0000;  /* Optional background color */
     padding: 2rem;
     display: flex;
     justify-content: center;
@@ -159,50 +160,3 @@ header {
     color: #ea3700; /* Highlight color (you can change it) */
     font-weight: bold; /* Make it bold or adjust as needed */
 }
-
-
-/* Main Section */
-.main{
-    display: flex;
-    flex: 1;
-}
-
-.left{
-    background: #efefef;
-    padding: 3em 0 3em 0;
-    flex: 1 1 100px;
-    font-size: clamp(1rem, 2.5vw, 2rem);
-    line-height: 1.2;
-    
-}
-
-.left h1 {
-    font-size: clamp(2rem, 5vw, 4rem);
-}
-
-.left h3 {
-    font-size: clamp(1rem, 3vw, 1.8rem);
-}
-
-.left img {
-    width: 90%;
-    height: auto; 
-}
-
-main{
-    background: #afafaf;
-    padding: 3em 0 3em 0;
-    flex: 5 5 150px;
-}
-
-.right{
-    background: #afafaf;
-    padding: 3em 0 3em 0;
-    flex: 1fr 1fr;
-}
-
-footer{
-    background: #afafaf;
-    padding: 1em 0 1em 0;
-}
-
