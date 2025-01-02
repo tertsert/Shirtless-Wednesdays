@@ -67,11 +67,11 @@ header {
         height: auto; /* Maintains aspect ratio */
     }
     .site-title {
-        opacity: 0;
+        display: none;
     }
     .navigation a {
         font-size: 12px;
-        padding: 15px;
+        padding: 5px;
     }
 }
 
@@ -118,7 +118,7 @@ header {
     column-gap: 10px; /* Space between columns */
     width: 80%; /* Full width container */
 }
-@media (max-width: 720px) {
+@media (max-width: 600px) {
     .journal-grid {
         width: 100%;
     }
@@ -151,9 +151,12 @@ header {
     line-height: 1.6;  /* Adjust line height for readability */
     color: #000000; /* Optional: Color of the paragraph */
 }
-@media (max-width: 720px) {
+@media (max-width: 600px) {
     .title-and-text p {
-        opacity: 0; /* Hide the text */
+        display: none;
+    }
+    .title-and-text h1 {
+        width: 100%;
     }
 }
 .highlight {
