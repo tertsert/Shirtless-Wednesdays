@@ -12,15 +12,24 @@
 </head>
 <body>
     <header>
-        <div class="home-image"></div>
-        <div class="page-menu">
-            <nav class="navigation">
-                <a href="index.html">HOME</a>
-                <a href="about.html" class="active">ABOUT</a>
-                <a href="work.html">WORK</a>
-                <a href="journal.html">JOURNAL</a>
-            </nav>
+        <div class="home-image" onclick="window.location.href='index.html';">
+          <img
+            src="assets/Logo/Shirtless Wednesdays Logo-500x500.png"
+            alt="Logo"
+          />
+          <span class="site-title">Shirtless Wednesdays</span>
         </div>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="navigation">
+          <a href="index.html">HOME</a>
+          <a href="about.html" class="active" >ABOUT</a>
+          <a href="work.html">WORK</a>
+          <a href="journal.html">JOURNAL</a>
+        </nav>
     </header>
     <div class="main">
         <div class="left">
