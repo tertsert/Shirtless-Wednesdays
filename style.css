@@ -3,6 +3,15 @@
     margin: 0 1%; /* Determines my margins*/
     box-sizing: border-box;
 }
+@media (max-width: 600px) {
+    * {
+        margin:0;
+    }
+}
+
+:root {
+    --secondary-color: #d99f00;
+}
 
 body{
     height: 95vh;
@@ -56,10 +65,10 @@ header {
     transition: color 0.3s;
 }
 .navigation a:hover {
-    color: #ea3700;
+    color: var(--secondary-color);
 }
 .navigation a.active {
-    color: #ea3700;
+    color: var(--secondary-color);
 }
 @media (max-width: 600px) { /*mobile formatting*/
     .home-image img {
@@ -75,32 +84,57 @@ header {
     }
 }
 
-/* About Section*/
-.main {
+/* Home Page specific */
+
+
+/* About Page specific */
+main.about-container {
     display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 2rem;  /* Adds spacing between the left and right sections */
-}
-.left {
-    flex: 1;
-    background-color: #ff0000;  /* Optional background color */
-    padding: 2rem;
-}
-.right {
-    flex: 1;
-    font-size: clamp(0.5rem, 2vw, 1.5rem);
-    background-color: #ff0000;  /* Optional background color */
-    padding: 2rem;
-    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
     justify-content: center;
-    align-items: flex-start;
 }
-.left h1 {
-    font-size: 2rem;  /* Adjust to your desired size */
+.about-text {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
 }
-.left h3 {
-    font-size: 1rem;  /* Adjust to your desired size */
+.about-text h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.about-photo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.about-photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+@media (max-width: 600px) {
+    main.about-container {
+        flex-direction: column;
+    }
+
+    .about-me-text, .about-photo {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .about-text p {
+        font-size: 0.9rem;
+    }
 }
 
 /* Journal Page specific */
@@ -151,6 +185,10 @@ header {
     line-height: 1.6;  /* Adjust line height for readability */
     color: #000000; /* Optional: Color of the paragraph */
 }
+.highlight {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
 @media (max-width: 600px) {
     .title-and-text p {
         display: none;
@@ -158,8 +196,4 @@ header {
     .title-and-text h1 {
         width: 100%;
     }
-}
-.highlight {
-    color: #ea3700; /* Highlight color (you can change it) */
-    font-weight: bold; /* Make it bold or adjust as needed */
 }
