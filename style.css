@@ -87,7 +87,73 @@ header {
 }
 
 /* Home Page specific */
+.background-wrapper {
+    background-image: url('assets/My Pictures/Youtube banner.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+}
 
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Let child elements fill height */
+    padding: 10rem 10rem;
+    gap: 5rem;
+    /*background-color: yellow;*/
+}
+
+/* Shared styling for both sides */
+.hero > div {
+    flex: 1; /* Each takes up 50% of the space */
+    display: flex;
+    align-items: center;    /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+}
+
+/* Optional: control text alignment */
+.logo-box {
+    flex-direction: column;
+    border: 3px solid black;
+    padding: 1rem 1.5rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+    /*background-color: green;*/
+
+}
+
+.intro-text {
+    flex-direction: column;
+    text-align: right;
+    background-color: rgba(113, 113, 113, 0.27);
+    border-radius: 15px;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-box {
+        border: 3px solid black;
+        padding: 1rem 1.5rem;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 1.2;
+        text-align: left;
+    }
+
+    .intro-text {
+        text-align: left;
+        font-size: 0.9rem;
+    }
+}
 
 /* About Page specific */
 main.about-container {
